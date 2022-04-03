@@ -38,11 +38,10 @@ const Joke = () => {
         setError('error');
       }
     };
-    if (search.length < 3) setError('search query size must be between 3 and 120')
+    if (!search.length) setError(null);
+    else if (search.length < 3) setError('search query size must be between 3 and 120');
     else searchJokes(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
-
-  console.log(error);
 
   return (
     <section className="px-4 w-full flex flex-col justify-center items-start">

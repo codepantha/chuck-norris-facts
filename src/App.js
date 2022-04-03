@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <main className="font-body bg-gray-400 w-full min-h-screen">
+    <main className="font-body w-full min-h-screen overflow-x-hidden">
       <Navbar />
       <Routes>
         <Route path="/" element={<Joke />}></Route>

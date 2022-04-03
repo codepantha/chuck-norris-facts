@@ -1,12 +1,16 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Joke from "./components/Joke";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div>
+    <main className="font-body bg-gray-400 w-full min-h-screen">
       <Navbar />
-      <h1 className="text-secondary text-2xl font-body">Chucky</h1>
-    </div>
+      <Routes>
+        <Route path="/" element={<Joke />}></Route>
+      </Routes>
+    </main>
   );
 }
 

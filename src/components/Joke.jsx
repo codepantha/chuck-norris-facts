@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { fetchCategories, fetchJoke, fetchRandomJokeInACategory, searchJokes } from "../utils/chuckApi";
 import Button from "./Button";
 import Select from "./Select";
+import { GiHighKick } from 'react-icons/gi';
 
 const Joke = () => {
   const [joke, setJoke] = useState({});
@@ -89,8 +90,8 @@ const Joke = () => {
           </article>
         ))
       )}
-      <Button type="button" className="more-chuck" moreButton={moreButton} setMoreButton={setMoreButton}>
-        More of chuck
+      <Button moreButton={moreButton} setMoreButton={setMoreButton}>
+        More of chuck <GiHighKick size={40} />
       </Button>
     </section>
   );

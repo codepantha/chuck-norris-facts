@@ -5,7 +5,7 @@ const Button = ({ moreButton, setMoreButton, children }) => {
     <>
       <button
         type="button"
-        className="p-4 md:self-center shadow-md rounded-md bg-primary text-secondaryContrast outline-none cursor-pointer"
+        className="more-chuck flex md:w-3/12 justify-around items-center"
         onClick={() => setMoreButton(!moreButton)}
       >
         {children}

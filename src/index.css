@@ -11,3 +11,7 @@
 .card {
   @apply mt-5 mb-5 md:w-3/4 px-4 py-5 shadow-md rounded md:self-center bg-secondaryContrast
 }
+
+.more-chuck {
+  @apply p-4 md:self-center shadow-md rounded-md bg-primary text-secondaryContrast outline-none cursor-pointer
+}

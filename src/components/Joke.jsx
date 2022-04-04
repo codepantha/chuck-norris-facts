@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
 import Search from "./Search";
 import { v4 as uuidv4 } from "uuid";
+import { fetchJoke, searchJokes } from "../utils/chuckApi";
+import Button from "./Button";
 
 const Joke = () => {
   const [joke, setJoke] = useState({});
@@ -12,10 +14,8 @@ const Joke = () => {
 
   const getJoke = async () => {
     try {
-      const res = await fetch("https://api.chucknorris.io/jokes/random");
-      const data = await res.json();
-      setJoke(data);
-      setError(null);
+      const res = await fetchJoke();
+      setJoke(res);
     } catch (error) {
       setError(error);
     }
@@ -26,22 +26,18 @@ const Joke = () => {
   }, []);
 
   useEffect(() => {
-    const searchJokes = async (query) => {
-      try {
-        const res = await fetch(
-          `https://api.chucknorris.io/jokes/search?query=${query}`
-        );
-        const data = await res.json();
-        setJokes(data.result);
-        setError(null)
-      } catch (error) {
-        setError('error');
-      }
-    };
     if (!search.length) setError(null);
-    else if (search.length < 3) setError('search query size must be between 3 and 120');
-    else searchJokes(debouncedSearchTerm);
-  }, [debouncedSearchTerm]);
+    else if (search.length < 3)
+      setError("search query size must be between 3 and 120");
+    else {
+      searchJokes(debouncedSearchTerm)
+        .then((res) => {
+          setJokes(res);
+          setError(null);
+        })
+        .catch((error) => setError(error));
+    }
+  }, [debouncedSearchTerm, search.length]);
 
   return (
     <section className="px-4 w-full flex flex-col justify-center items-start">
@@ -63,13 +59,9 @@ const Joke = () => {
           </article>
         ))
       )}
-      <button
-        type="button"
-        className="p-4 md:self-center shadow-md rounded-md bg-primary text-secondaryContrast outline-none cursor-pointer"
-        onClick={getJoke}
-      >
+      <Button type="button" className="more-chuck" getJoke={getJoke}>
         More of chuck
-      </button>
+      </Button>
     </section>
   );
 };

@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Button = ({ getJoke, children }) => {
+const Button = ({ moreButton, setMoreButton, children }) => {
   return (
     <>
       <button
         type="button"
         className="p-4 md:self-center shadow-md rounded-md bg-primary text-secondaryContrast outline-none cursor-pointer"
-        onClick={getJoke}
+        onClick={() => setMoreButton(!moreButton)}
       >
         {children}
       </button>

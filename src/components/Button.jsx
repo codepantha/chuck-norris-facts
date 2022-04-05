@@ -5,7 +5,7 @@ const Button = ({ moreButton, setMoreButton, children }) => {
     <>
       <button
         type="button"
-        className="more-chuck flex md:w-3/12 justify-around items-center"
+        className="more-chuck flex md:min-w-max justify-around self-start md:items-center"
         onClick={() => setMoreButton(!moreButton)}
       >
         {children}

@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = ({ search, setSearch }) => {
   return (
-    <section className="w-full mb-5 md:w-3/4 h-20 bg-transparent md:self-center">
+    <section className="mb-5 h-20 bg-transparent w-full">
       <input
         type="text"
         name="search"

@@ -70,9 +70,11 @@ const Joke = () => {
   }, [debouncedSearchTerm, search.length]);
 
   return (
-    <section className="px-4 w-full flex flex-col justify-center items-start">
-      <Search search={search} setSearch={setSearch} />
-      <Select category={category} categories={categories} handleSelect={handleSelect} />
+    <section className="px-4 w-full flex flex-col justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 md:gap-6">
+        <Search search={search} setSearch={setSearch} />
+        <Select category={category} categories={categories} handleSelect={handleSelect} />
+      </div>
       {!search ? (
         <article className="card">
           {error ? (

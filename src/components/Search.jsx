@@ -7,7 +7,7 @@ const Search = ({ search, setSearch }) => {
         type="text"
         name="search"
         autoFocus={true}
-        className="outline-none border-b-2 border-l-2 border-r bg-transparent border-gray-200 shadow-lg w-full h-full rounded-md px-2 text-primary"
+        className="outline-none border-b-2 border-l-2 border-r bg-transparent border-gray-600 dark:border-slate-500 shadow-lg w-full h-full rounded-md px-2 text-primary dark:text-secondaryContrast"
         placeholder="Enter a search term"
         value={search}
         onChange={(e) => setSearch(e.target.value)}

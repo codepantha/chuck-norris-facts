@@ -70,25 +70,25 @@ const Joke = () => {
   }, [debouncedSearchTerm, search.length]);
 
   return (
-    <section className="px-4 w-full flex flex-col justify-center items-center">
+    <section className="px-4 h-full w-full flex flex-col items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 md:gap-6">
         <Search search={search} setSearch={setSearch} />
         <Select category={category} categories={categories} handleSelect={handleSelect} />
       </div>
       {!search ? (
-        <article className="card">
+        <article className="card dark:bg-slate-700">
           {error ? (
             <p className="error">{error}</p>
           ) : (
-            <p className="tracking-wider text-primary">{joke.value}</p>
+            <p className="tracking-wider text-primary dark:text-secondaryContrast">{joke.value}</p>
           )}
         </article>
       ) : error ? (
         <p className="error">{error}</p>
       ) : (
         jokes?.map((joke) => (
-          <article key={uuidv4()} className="card">
-            <p className="tracking-wider text-primary">{joke.value}</p>
+          <article key={uuidv4()} className="card dark:bg-slate-700">
+            <p className="tracking-wider text-primary dark:text-secondaryContrast">{joke.value}</p>
           </article>
         ))
       )}

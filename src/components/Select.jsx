@@ -9,7 +9,7 @@ const Select = ({ category, categories, handleSelect }) => {
       </svg>
       <select
         value={category}
-        className="w-full h-20 outline-none bg-secondary rounded-lg p-4 text-secondaryContrast cursor-pointer appearance-none shadow-lg"
+        className="w-full h-20 outline-none bg-secondary dark:bg-lime-700 rounded-lg p-4 text-secondaryContrast cursor-pointer appearance-none shadow-lg"
         onChange={handleSelect}
       >
         {categories?.map((category) => (

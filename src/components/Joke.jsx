@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
 import Search from "./Search";
 import { v4 as uuidv4 } from "uuid";
-import { fetchCategories, fetchJoke, fetchRandomJokeInACategory, searchJokes } from "../utils/chuckApi";
+import {
+  fetchCategories,
+  fetchJoke,
+  fetchRandomJokeInACategory,
+  searchJokes
+} from "../utils/chuckApi";
 import Button from "./Button";
 import Select from "./Select";
-import { GiHighKick } from 'react-icons/gi';
+import { GiHighKick } from "react-icons/gi";
 
 const Joke = () => {
   const [joke, setJoke] = useState({});
@@ -33,11 +38,11 @@ const Joke = () => {
     } catch (error) {
       setError(error);
     }
-  }
+  };
 
   const handleSelect = (e) => {
     setCategory(e.target.value);
-    setSearch('');
+    setSearch("");
   };
 
   useEffect(() => {
@@ -73,22 +78,32 @@ const Joke = () => {
     <section className="px-4 h-full w-full flex flex-col items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 md:gap-6">
         <Search search={search} setSearch={setSearch} />
-        <Select category={category} categories={categories} handleSelect={handleSelect} />
+        <Select
+          category={category}
+          categories={categories}
+          handleSelect={handleSelect}
+        />
       </div>
       {!search ? (
         <article className="card dark:bg-slate-700">
           {error ? (
             <p className="error">{error}</p>
+          ) : !joke.value ? (
+            <p>Loading...</p>
           ) : (
-            <p className="tracking-wider text-primary dark:text-secondaryContrast">{joke.value}</p>
+            <p className="tracking-wider text-primary dark:text-secondaryContrast">
+              {joke.value}
+            </p>
           )}
         </article>
       ) : error ? (
-        <p className="error">{error}</p>
+        <p className="error mt-2">{error}</p>
       ) : (
         jokes?.map((joke) => (
           <article key={uuidv4()} className="card dark:bg-slate-700">
-            <p className="tracking-wider text-primary dark:text-secondaryContrast">{joke.value}</p>
+            <p className="tracking-wider text-primary dark:text-secondaryContrast">
+              {joke.value}
+            </p>
           </article>
         ))
       )}

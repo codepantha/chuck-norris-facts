@@ -10,6 +10,7 @@ const Search = ({ search, setSearch }) => {
         className="outline-none border-b-2 border-l-2 border-r bg-transparent border-gray-600 dark:border-slate-500 shadow-lg w-full h-full rounded-md px-2 text-primary dark:text-secondaryContrast"
         placeholder="Enter a search term"
         value={search}
+        autoComplete="off"
         onChange={(e) => setSearch(e.target.value)}
       />
     </section>

@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ChuckJokes
 
-## Available Scripts
+Believe Chuck Norris would kick Superman's arse? Welcome to ChuckJokes!
 
-In the project directory, you can run:
+A ChuckJoke a day keeps the roundhouse kick away
 
-### `npm start`
+Desktop View | Mobile View
+:------:|:-----:
+![image](https://user-images.githubusercontent.com/46839548/162593740-a9fb2e5b-4e36-4fbc-9c2a-f221e43997d1.png) | ![image](https://user-images.githubusercontent.com/46839548/162593813-5fb3bee1-8146-4936-80db-56e004fda815.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Add Doctor Dark Theme | Mobile Version
+:------:|:-----:
+![image](https://user-images.githubusercontent.com/46839548/162593854-8010d6d8-9b56-49bc-9bb7-1779058ae89e.png) | ![image](https://user-images.githubusercontent.com/46839548/162593932-cc0cb090-b315-4b04-aed9-b8e7b6620d16.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- React
+- [Rails API]('http://codepantha/chuck-norris-facts')
+- Tailwindcss
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Set up locally
 
-### `npm run build`
+- Open your terminal and run the following command: <code>git clone https://github.com/codepantherr/chuck-norris-facts.git</code>
+- Run the command <code>cd chuck-norris-facts</code>
+- Run the command <code>npm install</code>
+- Run the command <code>npm start</code>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once you completed this steps you should see the app running at: http://localhost:3000/ in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Author 👤
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👤 Promise Eze
 
-### `npm run eject`
+- GitHub: [@codepantha](https://github.com/codepantha)<br>
+- Twitter: [@codepantherr](https://twitter.com/codepantha)<br>
+- LinkedIn: [@promise-eze](https://www.linkedin.com/in/promise-eze/)<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🤝 Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions, issues, and feature requests are welcome!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Feel free to check the [issues page](https://github.com/AlexRS90/space-travelers/issues)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Show your support
 
-## Learn More
+Give a ⭐️ if you like this project!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Thanks to [Murat Korkmaz](https://www.behance.net/muratk) for the [UI design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign).
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [MIT License](./LICENSE)

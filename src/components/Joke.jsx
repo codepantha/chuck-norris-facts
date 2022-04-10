@@ -91,7 +91,7 @@ const Joke = () => {
           ) : !joke.value ? (
             <p>Loading...</p>
           ) : (
-            <p className="tracking-wider text-primary dark:text-secondaryContrast">
+            <p className="tracking-wider text-primary dark:text-secondaryContrast text-focus-in">
               {joke.value}
             </p>
           )}
@@ -101,7 +101,7 @@ const Joke = () => {
       ) : (
         jokes?.map((joke) => (
           <article key={uuidv4()} className="card dark:bg-slate-700">
-            <p className="tracking-wider text-primary dark:text-secondaryContrast">
+            <p className="tracking-wider text-primary dark:text-secondaryContrast text-focus-in">
               {joke.value}
             </p>
           </article>
